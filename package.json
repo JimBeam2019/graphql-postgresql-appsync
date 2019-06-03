@@ -1,0 +1,36 @@
+{
+  "name": "graphql-postgresql-appsync",
+  "version": "1.0.0",
+  "description": "A stir fry of GraphQL, Postgresql AppSync",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon src/index.js --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimBeam2019/graphql-postgresql-appsync.git"
+  },
+  "author": "JimBeam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JimBeam2019/graphql-postgresql-appsync/issues"
+  },
+  "homepage": "https://github.com/JimBeam2019/graphql-postgresql-appsync#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-watch": "^5.1.2",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "apollo-server": "^2.6.1",
+    "graphql": "^14.3.1"
+  }
+}
