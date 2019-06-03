@@ -1,11 +1,11 @@
 const recipes = [
     {
         title: 'Cheese Cake',
-        type: 1
+        type: 'DESERT'
     },
     {
         title: 'Pizza',
-        type: 2
+        type: 'MAIN_COURSE'
     }
 ];
 

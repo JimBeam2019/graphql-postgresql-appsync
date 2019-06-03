@@ -1,15 +1,15 @@
 import { gql } from 'apollo-server';
 
 const typeDefs = gql`
-    # enum MEAL_TYPE {
-    #     STARTER: 1
-    #     MAIN_COURSE: 2
-    #     DESERT: 3
-    # }
+    enum MealType {
+        STARTER
+        MAIN_COURSE
+        DESERT
+    }
 
     type Recipe {
         title: String
-        type: Int
+        type: MealType!
     }
 
     type Query {

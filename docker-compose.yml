@@ -1,4 +1,5 @@
-version: '2'
+version: '3'
+
 services:
   node:
     image: "node:10"
@@ -11,3 +12,16 @@ services:
       - .:/usr/src/graphql-postgresql-appsync
     ports:
       - "4000:4000"
+  
+  postgresql:
+    image: postgres:10.8
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgresql:/var/lib/postgresql
+
+volumes:
+  postgresql: 
