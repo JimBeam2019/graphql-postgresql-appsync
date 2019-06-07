@@ -1,20 +1,7 @@
-const recipes = [
-    {
-        title: 'Cheese Cake',
-        type: 'DESERT'
-    },
-    {
-        title: 'Pizza',
-        type: 'MAIN_COURSE'
-    }
-];
+import Query from './resolvers/Query';
 
 const resolvers = {
-    Query: {
-        recipes: () => recipes,
-    },
+  Query,
 };
 
-module.exports = {
-    resolvers
-};
+module.exports = resolvers;
