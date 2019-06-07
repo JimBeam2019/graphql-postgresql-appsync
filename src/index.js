@@ -1,13 +1,18 @@
 import { ApolloServer } from 'apollo-server';
+import { buildFederatedSchema } from '@apollo/federation';
 
-import { resolvers } from './resolvers';
-import { typeDefs } from './schema';
+import typeDefs from './schema';
+import resolvers from './resolvers';
 
 const server = new ApolloServer({
-    typeDefs,
-    resolvers,
+  schema: buildFederatedSchema([
+    {
+      typeDefs,
+      resolvers,
+    },
+  ]),
 });
 
 server.listen().then(({ url }) => {
-    console.log(`Apollo server is ready at ${url}`);
+  console.log(`Apollo server is ready at ${url}`);
 });
