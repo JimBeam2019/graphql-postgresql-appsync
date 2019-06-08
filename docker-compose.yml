@@ -25,11 +25,14 @@ services:
 
   dynamodb:
     image: amazon/dynamodb-local
+    environment:
+      - ./Djava.library.path=./DynamoDBLocal_lib
     ports:
       - "8000:8000"
     volumes:
-      - dynamodb:/var/lib/dynamodb
-    # command: 
+      - dynamodb:/usr/data/dynamodb
+    command: ["-jar", "DynamoDBLocal.jar", "-sharedDb", "-dbPath", "/usr/data/dynamodb/"]
 
 volumes:
   postgresql: 
+  dynamodb:
